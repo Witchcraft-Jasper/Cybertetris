@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>589</width>
+    <width>513</width>
     <height>560</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>43</x>
       <y>45</y>
-      <width>300</width>
+      <width>200</width>
       <height>300</height>
      </rect>
     </property>
@@ -31,7 +31,7 @@
     </property>
     <property name="minimumSize">
      <size>
-      <width>300</width>
+      <width>200</width>
       <height>300</height>
      </size>
     </property>
@@ -41,25 +41,49 @@
       <height>300</height>
      </size>
     </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+     </font>
+    </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QLabel" name="pause">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>100</y>
+       <width>161</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Tetris</family>
+       <pointsize>24</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>160</y>
-      <width>211</width>
-      <height>331</height>
+      <x>300</x>
+      <y>210</y>
+      <width>160</width>
+      <height>250</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
+      <family>Tetris</family>
       <pointsize>16</pointsize>
      </font>
     </property>
@@ -70,8 +94,20 @@
      <enum>QFrame::Raised</enum>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <property name="leftMargin">
+      <number>11</number>
+     </property>
      <item>
       <widget class="QLabel" name="ScoreLabel">
+       <property name="font">
+        <font>
+         <family>Tetris</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>分数</string>
        </property>
@@ -84,8 +120,8 @@
       <widget class="QLabel" name="Score">
        <property name="font">
         <font>
-         <family>Verdana</family>
-         <pointsize>16</pointsize>
+         <family>Tetris</family>
+         <pointsize>12</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -100,6 +136,12 @@
      </item>
      <item>
       <widget class="QLabel" name="LinesLabel">
+       <property name="font">
+        <font>
+         <family>Tetris</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>消除行数</string>
        </property>
@@ -112,8 +154,8 @@
       <widget class="QLabel" name="Lines">
        <property name="font">
         <font>
-         <family>Verdana</family>
-         <pointsize>16</pointsize>
+         <family>Tetris</family>
+         <pointsize>12</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -128,6 +170,12 @@
      </item>
      <item>
       <widget class="QLabel" name="LevelLabel">
+       <property name="font">
+        <font>
+         <family>Tetris</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>等级</string>
        </property>
@@ -140,8 +188,8 @@
       <widget class="QLabel" name="Level">
        <property name="font">
         <font>
-         <family>Verdana</family>
-         <pointsize>16</pointsize>
+         <family>Tetris</family>
+         <pointsize>12</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -156,6 +204,12 @@
      </item>
      <item>
       <widget class="QLabel" name="TimerIntervalLabel">
+       <property name="font">
+        <font>
+         <family>Tetris</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>游戏速度</string>
        </property>
@@ -168,8 +222,8 @@
       <widget class="QLabel" name="TimerInterval">
        <property name="font">
         <font>
-         <family>Verdana</family>
-         <pointsize>16</pointsize>
+         <family>Tetris</family>
+         <pointsize>12</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -187,8 +241,8 @@
    <widget class="QFrame" name="nextShapeGlass">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>60</y>
+      <x>290</x>
+      <y>50</y>
       <width>92</width>
       <height>92</height>
      </rect>
@@ -211,6 +265,11 @@
       <height>90</height>
      </size>
     </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+     </font>
+    </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
@@ -218,42 +277,200 @@
      <enum>QFrame::Raised</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="pause">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>170</y>
-      <width>161</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>黑体</family>
-      <pointsize>24</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="nextShape">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>10</y>
+      <x>290</x>
+      <y>0</y>
       <width>81</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Tetris</family>
       <pointsize>16</pointsize>
      </font>
     </property>
     <property name="text">
      <string>下一个</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TimerShowLabel">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>91</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>时间</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="TimerShow">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>50</y>
+      <width>101</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>160</y>
+      <width>111</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+     </font>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Tetris</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>欢迎您，</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="name">
+       <property name="font">
+        <font>
+         <family>Tetris</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>游客</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <family>Tetris</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>金币</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="coins">
+       <property name="font">
+        <font>
+         <family>Tetris</family>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="item1">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>470</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../build-Cybertetris-Desktop_Qt_5_12_MinGW_64_bit-Debug/resources/items/1.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="item2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>470</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../build-Cybertetris-Desktop_Qt_5_12_MinGW_64_bit-Debug/resources/items/2.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="item3">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>470</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../build-Cybertetris-Desktop_Qt_5_12_MinGW_64_bit-Debug/resources/items/3.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
@@ -262,7 +479,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>589</width>
+     <width>513</width>
      <height>25</height>
     </rect>
    </property>
@@ -273,22 +490,17 @@
     <addaction name="saveGame"/>
     <addaction name="loadGame"/>
    </widget>
-   <widget class="QMenu" name="menu_2">
+   <widget class="QMenu" name="set">
     <property name="title">
      <string>选项</string>
     </property>
-    <addaction name="action"/>
-   </widget>
-   <widget class="QMenu" name="menu_3">
-    <property name="title">
-     <string>模式</string>
-    </property>
+    <addaction name="storeMenu"/>
+    <addaction name="setting"/>
+    <addaction name="backMenu"/>
    </widget>
    <addaction name="menu"/>
-   <addaction name="menu_3"/>
-   <addaction name="menu_2"/>
+   <addaction name="set"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="saveGame">
    <property name="text">
     <string>保存</string>
@@ -299,9 +511,19 @@
     <string>读取</string>
    </property>
   </action>
-  <action name="action">
+  <action name="setting">
    <property name="text">
     <string>游戏设置</string>
+   </property>
+  </action>
+  <action name="backMenu">
+   <property name="text">
+    <string>返回主菜单</string>
+   </property>
+  </action>
+  <action name="storeMenu">
+   <property name="text">
+    <string>商城</string>
    </property>
   </action>
  </widget>

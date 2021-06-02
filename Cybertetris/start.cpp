@@ -7,6 +7,25 @@ Start::Start(QWidget *parent) :
 {
     ui->setupUi(this);
     initial();
+    faces = 1;
+    store = new Store(this);
+    connect(store,
+            SIGNAL(storeClosed()),
+            this,
+            SLOT(showLabel()));
+    connect(store,SIGNAL(face1()),this,SLOT(faceChange1()));
+    connect(store,SIGNAL(face2()),this,SLOT(faceChange2()));
+    connect(store,SIGNAL(face3()),this,SLOT(faceChange3()));
+}
+
+void Start::faceChange1(){
+    faces = 1;
+}
+void Start::faceChange2(){
+    faces = 2;
+}
+void Start::faceChange3(){
+    faces = 3;
 }
 
 Start::~Start()
@@ -21,15 +40,55 @@ void Start::initial()//初始化
     pal.setColor(QPalette::Background, QColor(255,250,240));
     this->setAutoFillBackground(true);
     this->setPalette(pal);
-    ui->label->setGeometry(80,80,600,100);
-    ui->startgame->setGeometry(130, 300, 150, 50);
-    ui->pushButton->setGeometry(130, 370, 150, 50);
-    ui->pushButton_2->setGeometry(130, 440, 150, 50);
+    ui->Title->setGeometry(80,80,600,100);
+    ui->LogIn->setGeometry(130, 230, 150, 50);
+    ui->Normal->setGeometry(130, 300, 150, 50);
+    ui->Timer->setGeometry(130, 370, 150, 50);
+    ui->Clean->setGeometry(130, 440, 150, 50);
+    ui->Store->setGeometry(130, 510, 150, 50);
+    log = new login;
 }
 
-void Start::on_startgame_clicked()
+void Start::on_Normal_clicked()
 {
-    setVisible(false);
-    MainWindow* w =  new MainWindow;
+    MainWindow* w =  new MainWindow(0,faces);
     w->show();
+    account = log->account;
+    w->account = account;
+    setVisible(false);
+}
+
+void Start::on_Timer_clicked()
+{
+    MainWindow* w =  new MainWindow(1,faces);
+    w->show();
+    account = log->account;
+    w->account = account;
+    setVisible(false);
+}
+
+void Start::on_LogIn_clicked()
+{
+
+    log->show();
+}
+
+void Start::on_Clean_clicked()
+{
+    MainWindow* w =  new MainWindow(2,faces);
+    w->show();
+    account = log->account;
+    w->account = account;
+    setVisible(false);
+}
+
+void Start::on_Store_clicked()
+{
+    store->show();
+    this->hide();
+}
+
+void Start::showLabel()
+{
+    this->show();
 }
