@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>resources/background/start.jpg</file>
+        <file>resources/background/login.png</file>
+        <file>resources/background/normal.png</file>
+        <file>resources/background/time.png</file>
+        <file>resources/background/clean.png</file>
+        <file>resources/background/lianji.png</file>
+        <file>resources/background/store.png</file>
+        <file>resources/background/play.jpg</file>
+    </qresource>
+</RCC>

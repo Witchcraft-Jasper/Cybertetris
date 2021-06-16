@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>start.jpg</file>
+        <file>login.png</file>
+        <file>normal.png</file>
+        <file>time.png</file>
+        <file>clean.png</file>
+        <file>store.png</file>
+        <file>play.jpg</file>
+        <file>light.jpg</file>
+    </qresource>
+</RCC>
