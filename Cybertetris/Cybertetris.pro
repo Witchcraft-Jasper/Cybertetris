@@ -3,6 +3,7 @@ TEMPLATE = app
 CONFIG += c++11
 
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,20 +15,29 @@ CONFIG += c++11
 
 SOURCES += \
     game.cpp \
+    gamesettings.cpp \
+    login.cpp \
     main.cpp \
     mainwindow.cpp \
     settings.cpp \
-    start.cpp
+    start.cpp \
+    store.cpp
 
 HEADERS += \
     game.h \
+    gamesettings.h \
+    login.h \
     mainwindow.h \
     settings.h \
-    start.h
+    start.h \
+    store.h
 
 FORMS += \
+    gamesettings.ui \
+    login.ui \
     mainwindow.ui \
-    start.ui
+    start.ui \
+    store.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -110,6 +110,7 @@ const Shape shapes[SHAPES_NUM] = {
 //当前游戏状态
 class Game {
   int h, w; //高度和宽度
+  int mode;
   void memAlloc(); //数据转移到堆中
   void memFree(); //当游戏结束时清除记录
   //绘制图形
@@ -120,7 +121,7 @@ class Game {
   //检测是否形成完整的一行
   void checkFullLines();
   //消除完整的一行
-  void removeFullLines(int fromRow, int toRow);
+
  public:
   //获取高度
   int height() {
@@ -146,6 +147,8 @@ class Game {
   Game(int width, int height);
   ~Game();
 
+
+  void removeFullLines(int fromRow, int toRow);
   //绘制图像
   void draw(const Shape& shape);
   // 清除图像
@@ -156,6 +159,11 @@ class Game {
 
   //能否移动方块
   bool move(int dx, int dy);
+
+  //选择保存游戏时
+  void save(QString fileName);
+  //选择读取游戏时
+  void load(QString fileName);
 
   void hardDrop();//硬降
   bool getCircle(Shape& shape);

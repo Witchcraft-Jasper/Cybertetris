@@ -14,31 +14,55 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="Clean">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>250</y>
-      <width>80</width>
-      <height>20</height>
+      <x>420</x>
+      <y>280</y>
+      <width>91</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+     </font>
+    </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Clean mode</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QPushButton" name="Normal">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
+      <x>170</x>
+      <y>280</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Normal mode</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Title">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>51</y>
       <width>261</width>
       <height>151</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>MV Boli</family>
+      <family>Tetris</family>
       <pointsize>24</pointsize>
      </font>
     </property>
@@ -46,36 +70,61 @@
      <string>Cybertetris</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="Timer">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>250</y>
-      <width>80</width>
-      <height>20</height>
+      <x>300</x>
+      <y>280</y>
+      <width>91</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Timer mode</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="startgame">
+   <widget class="QPushButton" name="Store">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>240</y>
+      <x>30</x>
+      <y>280</y>
       <width>111</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>MV Boli</family>
-      <pointsize>14</pointsize>
+      <family>Tetris</family>
+      <pointsize>9</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Start</string>
+     <string>Store</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="LogIn">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>220</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tetris</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Log in</string>
     </property>
    </widget>
   </widget>

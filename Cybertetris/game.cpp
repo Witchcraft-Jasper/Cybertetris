@@ -124,6 +124,52 @@ void Game::drawCircle(){//绘制轮廓(未完成)
     }
 }
 
+//保存到文件
+void Game::save(QString fileName) {
+    QFile f(fileName); //创建文件对象
+    f.open(QIODevice::WriteOnly | QIODevice::Text);
+    //保存数据
+    //if(move(0,1)){
+        //move(0,-1);
+        erase(curShape);
+    //}
+    QTextStream out(&f);
+    //界面宽度及高度
+    out << w << " " << h << endl;
+
+    //循环将所有块输出
+    for(int i = 0; i < h; ++i) {
+        for(int j = 0; j < w; ++j)
+            out << glass[i][j];
+
+        out << endl;
+    }
+
+    f.close();
+}
+
+// 加载文件
+void Game::load(QString fileName) {
+    QFile f(fileName);
+    f.open(QIODevice::ReadOnly | QIODevice::Text);
+    QTextStream in(&f);
+
+    memFree();
+
+    //读取长、宽
+    in >> w >> h;
+    in.readLine();
+
+    memAlloc();
+
+    for(int i = 0; i < h; ++i) {
+        in >> glass[i];
+        in.readLine();
+    }//读取每一行
+
+    f.close();
+}
+
 
 void Game::hardDrop(){//硬降
     for(int i = 0; i < h; i++){
@@ -202,7 +248,7 @@ void Game::genNextShape() {
     //若下个方块列为空则重新生成
     if(nextShapes.empty()){
         genNextShapes();
-        qDebug() << "Gen new shapes";
+        //qDebug() << "Gen new shapes";
     }
     //选择一个随机的形状
     curShape = nextShapes.top();
@@ -210,10 +256,10 @@ void Game::genNextShape() {
     //若下个方块列为空则重新生成
     if(nextShapes.empty()){
         genNextShapes();
-        qDebug() << "Gen new shapes";
+        //qDebug() << "Gen new shapes";
     }
     nextShape = nextShapes.top();
-    qDebug() << nextShape.name;
+    //qDebug() << nextShape.name;
     //放在中间
     curShape.y = -SIZE;
     curShape.x = w / 2 - SIZE / 2;
